@@ -5,23 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
   </head>
+
   <body>
-    <h1>She Codes</h1>
-    <footer>
-      <p>
-        This project was coded by
-        <a href="https://github.com/gabiaguilerav" target="_blank"
-          >Gabriela Aguilera</a
-        >
-        and is on
-        <a href="https://github.com/gabiaguilerav/meteo.git" target="_blank"
-          >Github</a
-        >
-        and hosted on
-        <a href="https://weatherapp-by-gabriela.netlify.app" target="_blank"
-          >Netlify</a
-        >
-      </p>
-    </footer>
+    <div class="body-container">
+      <header>
+        <form class="data-search" id="city-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            id="city-name"
+          />
+          <input type="submit" value="search" id="enter" />
+        </form>
+      </header>
+
+      <div class="current">
+        <h1 id="new-city">Paris</h1>
+        <div class="temperature-data">
+          <div class="temperature-actual">
+            <span id="emoji">☀️</span>
+            <span id="temperature-now">14</span>
+            <span id="degrees">°C</span>
+          </div>
+          <div class="more-data">
+            <p>
+              <span id="current-date">Saturday 15:32</span>, moderate rain
+              <br />
+              Humidity: <strong>87%,</strong> Wind: <strong>7.2 km/h</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="prognoses">
+        <span>
+          <div>
+            <p>
+              Sun
+              <br />
+              <span>🌤</span>
+              <br />
+              <strong>14°C</strong> - 18°C
+            </p>
+          </div>
+        </span>
+
+        <span>
+          <div>
+            <p>
+              Mon
+              <br />
+              <span>🌤</span>
+              <br />
+              <strong>14°C</strong> - 18°C
+            </p>
+          </div>
+        </span>
+
+        <span>
+          <div>
+            <p>
+              Tue
+              <br />
+              <span>🌤</span>
+              <br />
+              <strong>14°C</strong> - 18°C
+            </p>
+          </div>
+        </span>
+
+        <span>
+          <div>
+            <p>
+              Wed
+              <br />
+              <span>🌤</span>
+              <br />
+              <strong>14°C</strong> - 18°C
+            </p>
+          </div>
+        </span>
+
+        <span>
+          <div>
+            <p>
+              Thu
+              <br />
+              <span>🌤</span>
+              <br />
+              <strong>14°C</strong> - 18°C
+            </p>
+          </div>
+        </span>
+      </section>
+
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/gabiaguilerav" target="_blank"
+            >Gabriela Aguilera</a
+          >
+          and is on
+          <a href="https://github.com/gabiaguilerav/meteo.git" target="_blank"
+            >Github</a
+          >
+          and hosted on
+          <a href="https://weatherapp-by-gabriela.netlify.app" target="_blank"
+            >Netlify</a
+          >
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
