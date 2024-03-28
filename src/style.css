@@ -73,6 +73,10 @@ h1 {
   font-size: 20px;
 }
 
+.more-data strong {
+  color: #fa7560;
+}
+
 hr {
   border: 1px #fa7560 solid;
   width: 80%;
