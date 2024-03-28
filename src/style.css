@@ -8,7 +8,7 @@ body {
 .body-container {
   padding: 55px 60px;
   margin: 60px auto;
-  max-width: 600px;
+  max-width: 700px;
   border-radius: 20px;
   background: white;
   box-shadow: 0 30px 50px rgba(42, 149, 232, 0.2);
@@ -46,6 +46,7 @@ body {
   border: 1px #fa7560 solid;
   background-color: #fa7560;
   color: white;
+  cursor: pointer;
 }
 
 h1 {
@@ -57,4 +58,46 @@ h1 {
 
 .temperature-data {
   display: flex;
+  text-align: left;
+  justify-content: center;
+}
+
+.temperature-actual p {
+  margin: 0 20px;
+  font-size: 44px;
+  font-weight: 500;
+}
+.more-data p {
+  margin: 0 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.prognoses {
+  margin: 45px auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.space {
+  margin: auto 25px;
+}
+
+footer p {
+  margin: 0 auto;
+  font-weight: 200;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #405983;
+  transition: all 200ms ease-in-out;
+}
+
+footer a:hover {
+  cursor: pointer;
+  color: #fa7560;
 }
