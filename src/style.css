@@ -73,6 +73,11 @@ h1 {
   font-size: 20px;
 }
 
+hr {
+  border: 1px #fa7560 solid;
+  width: 80%;
+}
+
 .prognoses {
   margin: 45px auto;
   display: flex;
