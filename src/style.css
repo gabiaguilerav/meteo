@@ -89,6 +89,9 @@ hr {
   margin: auto 25px;
 }
 
+.day {
+  font-size: 27px;
+}
 footer p {
   margin: 0 auto;
   font-weight: 200;
