@@ -66,11 +66,21 @@ h1 {
   margin: 0 20px;
   font-size: 44px;
   font-weight: 500;
+  line-height: 1.3;
 }
+
+.icon-image {
+  width: 80px;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: top;
+}
+
 .more-data p {
   margin: 0 20px;
   font-weight: 300;
   font-size: 20px;
+  line-height: 1.3;
 }
 
 .more-data strong {

@@ -8,7 +8,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let timeElement = document.querySelector("#current-time");
   let date = new Date(response.data.time * 1000);
-  console.log(response.data);
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
@@ -18,6 +18,8 @@ function displayTemperature(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
 
   timeElement.innerHTML = formatDate(date);
+
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon-image" />`;
 }
 
 //Time
