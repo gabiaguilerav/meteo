@@ -94,18 +94,33 @@ hr {
 
 .prognoses {
   margin: 45px auto;
-  display: flex;
-  text-align: center;
-  justify-content: center;
 }
 
-.space {
-  margin: auto 25px;
+.forecast {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.forecast-container {
+  display: grid;
 }
 
 .day {
   font-size: 27px;
+  color: #fa7560;
 }
+
+.forecast-icon-image {
+  width: 80px;
+}
+
+.forecast-temperature {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
 footer p {
   margin: 0 auto;
   font-weight: 200;
