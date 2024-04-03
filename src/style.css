@@ -111,8 +111,11 @@ hr {
   color: #fa7560;
 }
 
-.forecast-icon-image {
+.forecast-icon-image img {
   width: 80px;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 .forecast-temperature {

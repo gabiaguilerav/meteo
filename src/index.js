@@ -62,10 +62,16 @@ function searcher(event) {
   searchCity(searchInput.value);
 }
 
-let cityImput = document.querySelector("#city-form");
-cityImput.addEventListener("submit", searcher);
-
 //Forecast
+//Day
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "7145tacf48aad88be65c0b31aoec2f85";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -73,28 +79,33 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
-
-  let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-  <div class="forecast-container">
-    <div class="day">${day}</div>
-    <div class="forecast-icon-image">🌤</div>
-    <div class="forecast-temperature">
-         <div><strong>15º</strong></div>
-         <div>9º</div>
-    </div>
-  </div>
-`;
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+        <div class="forecast-container">
+            <div class="day">${formatDay(day.time)}</div>
+            <div class="forecast-icon-image">
+                <img src="${day.condition.icon_url}"/>
+            </div>
+            <div class="forecast-temperature">
+                <div><strong>${Math.round(
+                  day.temperature.maximum
+                )}°</strong></div>
+                <div>${Math.round(day.temperature.minimum)}°</div>
+            </div>
+        </div>
+        `;
+    }
   });
-
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
+
+let cityImput = document.querySelector("#city-form");
+cityImput.addEventListener("submit", searcher);
+
 searchCity("Cologne");
